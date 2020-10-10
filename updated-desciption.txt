@@ -1,0 +1,7 @@
+Dcypher Mobile Application (Trading Alerts, Powered by Algorithms, Automated Trading, Charts)
+
+DCypher is an app that puts Technical and Fundamental Analysis at the fingertips of every Stock and Crypto Trader!
+
+I was one of the team who create an API for the mobile application. 
+We use the AWS Serverless feature in this project.
+In this development I am using the Serverless Framework to create, update and deploy the API to AWS Serverless.
