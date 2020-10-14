@@ -9,4 +9,4 @@ In this development I am using the Serverless Framework to create, update and de
 
 PGPAY (Trade In Service, Withdraw of Physical Gold)
 
-To provide trade-in services where customers can come down to the offices/shops to convert their Gold and have it credited into thier PG-Pay wallet which they can choose to spend/keep as an investment
+To provide trade-in services where customers can come down to the offices/shops to convert their Gold and have it credited into thier PG-Pay wallet which they can choose to spend/keep as an investment.
