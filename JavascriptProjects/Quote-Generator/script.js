@@ -10,12 +10,19 @@ let apiQuotes = [];
 function newQuote() {
     // Pick a random quote from apiQuotes
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)]
-    console.log(quote);
-    if(!quote.author) {
+    
+    if (!quote.author) {
         authorText.textContent = 'Unknown';
     } else {
         authorText.textContent = quote.author;
     }
+
+    if (quote.text.length > 150) {
+        quoteText.classList.add('long-quote');
+    } else {
+        quoteText.classList.remove('long-quote');
+    }
+
     quoteText.textContent = quote.text;
 }
 
