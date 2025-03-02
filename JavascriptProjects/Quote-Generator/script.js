@@ -7,21 +7,23 @@ const loader = document.getElementById('loader');
 
 let apiQuotes = [];
 
-// Show Loading
-function loading() {
+function showLoadingSpinner() {
     loader.hidden = false;
     quoteContainer.hidden = true;
 }
 
-//
-function complete() {
-    loader.hidden = true;
-    quoteContainer.hidden = false;
+
+function removeLoadingSpinner() {
+    if (!loader.hidder) {
+        loader.hidden = true;
+        quoteContainer.hidden = false;
+    }
+    
 }
 
 // Show New Quote
 function newQuote() {
-    loading();
+    showLoadingSpinner();
     // Pick a random quote from apiQuotes
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)]
     
@@ -39,13 +41,13 @@ function newQuote() {
     
     // Set quote, hide loader
     quoteText.textContent = quote.text;
-    complete();
+    removeLoadingSpinner();
 }
 
 // Get Quotes From API.
-async function getQuotes() {
-    loading();
-    const apiUrl = 'https://jacintodesign.github.io/quotes-api/data/quotes.json';
+async function getQuotesFromAPI() {
+    showLoadingSpinner();
+    const apiUrl = 'https://noelbclarion.github.io/quotes-api/data/quotes.json';
 
     try{
         const response = await fetch(apiUrl);
@@ -67,7 +69,7 @@ newQuoteBtn.addEventListener('click', newQuote);
 twitterBtn.addEventListener('click', tweetQuote);
 
 // On Load
-getQuotes();
+getQuotesFromAPI();
 
 // Sample Requests
 // https://zenquotes.io/api/quotes - Generate a JSON array of 50 random quotes on each request 
